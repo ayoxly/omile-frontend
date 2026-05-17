@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Omile
+
+**Hyper-local service exchange, built on Stellar.**
+
+Omile is an open-source app that lets neighbors post, accept, and pay for everyday tasks — securely, instantly, and without needing to trust a stranger upfront.
+
+---
+
+## The Problem
+
+In most neighborhoods, people need small things done — generator fueling, grocery runs, compound cleaning, quick errands. And there are always willing people nearby who could use the income. But two questions kill the deal every time:
+
+- *"Will they actually do the job if I pay upfront?"*
+- *"Will I get paid after I do the work?"*
+
+Omile solves both sides of that equation.
+
+---
+
+## How It Works
+
+1. **Post a task** — describe what you need and set a price
+2. **A neighbor accepts** — funds are locked in escrow automatically
+3. **Task is completed** — you confirm, they get paid instantly
+
+For recurring tasks (weekly cleaning, regular errands), Omile supports payment streaming — funds flow continuously and can be paused or stopped at any time.
+
+---
+
+## Why Stellar
+
+Omile is built on the [Stellar network](https://stellar.org) because it fits the use case perfectly:
+
+- **Near-zero fees** — micro-payments for small tasks are actually viable
+- **Fast finality** — payments settle in 3–5 seconds
+- **Stablecoin support** — users transact in familiar local currencies, not volatile crypto
+- **Built for emerging markets** — Stellar's infrastructure and mission aligns with the communities Omile serves
+
+Regular users never interact with a wallet directly. Omile handles account creation behind the scenes using passkey-based authentication — sign up with your email or fingerprint, that's it.
+
+---
+
+## Status
+
+Early development. The project is actively being built in the open.
+
+- [x] Project scaffolding
+- [ ] Task posting and browsing UI
+- [ ] Stellar wallet onboarding (account abstraction)
+- [ ] Escrow smart contract (Soroban)
+- [ ] Payment streaming for recurring tasks
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/your-username/omile.git
+cd omile
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Requires Node.js 18+. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full setup guide including Stellar testnet configuration.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome. Check the [Issues](../../issues) tab for open tasks — anything tagged `good-first-issue` is a great place to start.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[MIT](./LICENSE)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Omile — Your community. Your economy.*
